@@ -5,29 +5,33 @@
     box-sizing: border-box;
 }
 
-/* Page */
+/* Enable scrolling */
 html {
-    overflow-y: auto; /* enable scroll bar */
+    height: 100%;
+    overflow-y: auto;
 }
 
+/* Body MUST flow normally */
 body {
-    min-height: 100vh;
+    min-height: 100%;
     background: linear-gradient(315deg, #1b2845 0%, #274060 74%);
     font-family: 'Comfortaa', sans-serif;
     text-align: center;
 
-    /* IMPORTANT: allow page to grow */
     overflow-x: hidden;
     overflow-y: auto;
 }
 
-/* Main Content */
+/* Main Content (centering belongs HERE) */
 .content {
+    position: relative;
     z-index: 2;
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 40px 20px 80px;
+
+    padding: 40px 20px 120px; /* bottom padding forces scroll */
 }
 
 /* Year */
@@ -39,12 +43,11 @@ body {
     display: inline-flex;
 }
 
-/* 5 fades out */
+/* Animations */
 .five {
     animation: fadeFive 2s forwards;
 }
 
-/* 6 slides in */
 .six {
     position: absolute;
     right: 0;
@@ -65,20 +68,20 @@ body {
 /* Profile row */
 .profile-row {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 22px;
     margin-top: 24px;
-    flex-wrap: wrap;
 }
 
-/* Each image + label */
+/* Profile item */
 .profile-item {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/* Profile circles */
+/* Profile image */
 .profile {
     width: 198px;
     height: 198px;
