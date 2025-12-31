@@ -1,0 +1,42 @@
+@keyframes firework {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(6);
+        opacity: 0;
+    }
+}
+
+.firework {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: gold;
+    box-shadow:
+        0 0 red,
+        30px 0 yellow,
+        -30px 0 cyan,
+        0 30px lime,
+        0 -30px violet,
+        20px 20px orange,
+        -20px -20px pink;
+    animation: firework 2s infinite;
+    z-index: 1;
+}
+
+.firework:nth-child(2) {
+    top: 30%;
+    left: 25%;
+    animation-delay: 0.5s;
+}
+
+.firework:nth-child(3) {
+    top: 40%;
+    left: 75%;
+    animation-delay: 1s;
+}
