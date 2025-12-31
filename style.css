@@ -1,23 +1,33 @@
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Page */
+html {
+    overflow-y: auto; /* enable scroll bar */
+}
+
 body {
     min-height: 100vh;
     background: linear-gradient(315deg, #1b2845 0%, #274060 74%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
     font-family: 'Comfortaa', sans-serif;
     text-align: center;
+
+    /* IMPORTANT: allow page to grow */
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 /* Main Content */
 .content {
     z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px 80px;
 }
 
 /* Year */
@@ -68,9 +78,9 @@ body {
     align-items: center;
 }
 
-/* Profile circles — LARGE */
+/* Profile circles */
 .profile {
-    width: 198px;       /* ← adjust here if you want bigger/smaller */
+    width: 198px;
     height: 198px;
     border-radius: 50%;
     object-fit: cover;
@@ -85,6 +95,7 @@ body {
     letter-spacing: 1px;
     color: #ffffff;
     text-transform: uppercase;
+    max-width: 200px;
 }
 
 /* Animations */
@@ -101,5 +112,3 @@ body {
         transform: translateY(0);
     }
 }
-
-
