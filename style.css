@@ -70,7 +70,7 @@ body {
 
 /* Profile circles — LARGE */
 .profile {
-    width: 180px;       /* ← adjust here if you want bigger/smaller */
+    width: 195px;       /* ← adjust here if you want bigger/smaller */
     height: 180px;
     border-radius: 50%;
     object-fit: cover;
@@ -101,3 +101,4 @@ body {
         transform: translateY(0);
     }
 }
+
